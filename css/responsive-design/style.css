@@ -9,12 +9,31 @@ cite {
   margin-top: 10px;
 }
 
+body {
+  max-width: 960px;
+  background-color:
+}
+
+main {
+  width: 80%;
+
+  /*vertical-align: bottom;*/
+  display: inline-block;
+}
+
 #external-links ul {
   list-style-type: none;
-  padding-left: 0px;
+  padding-left: 10px;
 
 }
 
+#external-links {
+  display: inline-block;
+  float: right;
+  min-width: 150px;
+  width: 20%;
+  /*vertical-align: -500px;*/
+}
 
 
 
@@ -33,5 +52,5 @@ figure {
 figcaption {
   font-style: italic;
   text-align: right;
-}
 
+}
