@@ -11,12 +11,12 @@ cite {
 
 body {
   max-width: 960px;
-  background-color:
+  background-color: #666666;
+  margin: 0 auto;
 }
 
 main {
   width: 80%;
-
   /*vertical-align: bottom;*/
   display: inline-block;
 }
@@ -24,7 +24,6 @@ main {
 #external-links ul {
   list-style-type: none;
   padding-left: 10px;
-
 }
 
 #external-links {
@@ -52,5 +51,14 @@ figure {
 figcaption {
   font-style: italic;
   text-align: right;
-
 }
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 10px;
+  }
+  #external-links  {
+  float: left;
+  display: inline;
+}
+
