@@ -11,6 +11,11 @@ fur_color = gets.chomp
 
 puts "Would you recommend this hamster for adoption (y/n)?"
      input = gets.chomp
+if input == "y"
+     adoptable = true
+else
+     adoptable = false
+end
 
 puts "How old would you say this hamster is?"
 est_age = gets.chomp.to_i
