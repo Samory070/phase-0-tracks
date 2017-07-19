@@ -1,0 +1,18 @@
+-enter building
+-search signs/approach front desk ask for directions
+  -sort options to find match to destination
+  -set path to elevator till doors reached
+-stand facing elevator
+  -search for for up/down button panel
+  -check whether input should be going up or down.
+  -lift arm/finger to select up button for going up or down button for going down
+  -lower arm, move backwards 2 ft
+  - wait for doors to open, if elevator full, wait 4 seconds for elevator to clear
+  - move forward into elevator , rotate 180
+  -search level button panel on either side of the inside of elevator
+  -search if panel is on the left use left arm/search if panel is on the right side use right arm 
+  -sort through button levels to find matching level number
+  -lift arm/finger to select designated floor button on panel  
+  -search for level indicator, sort for matching level
+  -if sort matches, wait for elevator doors to open
+  -move forward exiting elevator
