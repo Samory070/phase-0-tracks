@@ -20,3 +20,8 @@ end
 puts "How old would you say this hamster is?"
 est_age = gets.chomp.to_i
 
+puts "This hamsters name is #{name}"
+puts "This hamster has a volume of #{volume}"
+puts "This hamster's fur color is #{fur_color}"
+puts "Do we recommend adoption: #{adoptable}"
+puts "This hamster's age is estimated to be #{est_age}"
