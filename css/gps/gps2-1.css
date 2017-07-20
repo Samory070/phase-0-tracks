@@ -1,4 +1,56 @@
-header {
-	background-color: #efefef;
-	color: yellowgreen;
+text-align: center;body {
+   box-sizing: border-box;
+  font-family: Verdana, Helvetica, sans-serif;
+  
 }
+
+header {
+  background-color: yellowgreen;
+  padding: 10px;
+  background-image: url("http://placeimg.com/900/200/tech");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+ }
+ 
+ h2 {
+   color: olivedrab;
+   font-size: 2em;
+ }
+ 
+ p {
+   font-size: 1em;
+ }
+ .column-1 {
+   background-color: papayawhip;
+   width: 47%;
+   display: table-cell;
+   padding: 10px;
+  
+ }
+  
+ .column-2 {
+   background: tomato;
+   width: 47%;
+   display: table-cell;
+   vertical-align: top;
+   padding: 10px;
+   
+   
+ }
+ 
+ a:link,
+ a:visited {
+   color: #000;
+ }
+ 
+ a:hover,
+ a:focus {
+   color: goldenrod;
+ }
+ 
+  footer{
+   background-color: #00BFFF;
+   text-align: center;
+ }
+ 
