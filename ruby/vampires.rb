@@ -8,7 +8,7 @@ puts "How many employees will be processed?"
 user_input = gets.chomp.to_i
 
 #survey loops based on user_input 
-until user_input == 1
+until user_input == i
 
   puts "What is your name?"
   name = gets.chomp
@@ -44,11 +44,11 @@ until user_input == 1
   end
   
   if name == "Tu Fang" 
-  name = false
+  	name = false
   elsif name == "Drake Cula"
-  name = false
+  	name = false
   else
-  name = true
+  	name = true
   end
 
 #case statement logic
@@ -61,9 +61,25 @@ until user_input == 1
     end
     user_input -= 1
   end
-
-
-# #case statement
+  
+  #allergy checker
+  puts "List any allergies?"
+  puts "Type 'done' when you are finished."
+  user_input = ""
+  
+  #loop to see if user user_input matches "sunshine"
+  until user_input == "exit"
+  	user_input = gets.chomp
+  	if user_input == "sunshine"
+  		puts "Probably a Vampire"
+  		break
+  	end
+  end
+  
+  puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+  
+  
+  # #case statement
 #   case 
 #   when name == "Drake Cula" || name == "Tu Fang" then " Definitely a vampire."
 #   when garlic_bread == "N" && health_care == "N" then p "Almost certainly a vampire."
@@ -74,9 +90,3 @@ until user_input == 1
 #   end
 #   user_input -= 1
 # end
-
-
-
-  
-
-  
