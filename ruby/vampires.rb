@@ -79,7 +79,7 @@ until user_input == i
   puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
   
   
-  # #case statement
+# #case statement
 #   case 
 #   when name == "Drake Cula" || name == "Tu Fang" then " Definitely a vampire."
 #   when garlic_bread == "N" && health_care == "N" then p "Almost certainly a vampire."
