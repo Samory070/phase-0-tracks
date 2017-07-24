@@ -1,10 +1,14 @@
 # 4.5 Solo Challenge: Control Flow Practice
 #Vetting process for employees to check if they're a possible vampire.
 current_year = 2017
+i = 0
 
+puts "Here at Werewolf Inc, we have a few questions as part as out vetting proceess. We don't want any vampires sneaking in."
+puts "How many employees will be processed?"
+user_input = gets.chomp.to_i
 
-puts "Here at Werewolf Inc, we have a few questions as part as out vetting proceess. We don't want any vampires sneaking in.
-
+#survey loops based on user_input 
+until user_input == 1
 
   puts "What is your name?"
   name = gets.chomp
@@ -34,21 +38,18 @@ puts "Here at Werewolf Inc, we have a few questions as part as out vetting proce
   end
   
   if health_care == "Y"
-  	health_care = true
+  health_care = true
   else
-  	health_care = false
+  health_care = false
   end
   
   if name == "Tu Fang" 
-  	name = false
+  name = false
   elsif name == "Drake Cula"
-  	name = false
+  name = false
   else
- 	 name = true
+  name = true
   end
-
-
-
 
 #case statement logic
   case 
@@ -60,11 +61,9 @@ puts "Here at Werewolf Inc, we have a few questions as part as out vetting proce
     end
     user_input -= 1
   end
-  
 
-  
-  
-  # #case statement
+
+# #case statement
 #   case 
 #   when name == "Drake Cula" || name == "Tu Fang" then " Definitely a vampire."
 #   when garlic_bread == "N" && health_care == "N" then p "Almost certainly a vampire."
@@ -76,3 +75,8 @@ puts "Here at Werewolf Inc, we have a few questions as part as out vetting proce
 #   user_input -= 1
 # end
 
+
+
+  
+
+  
