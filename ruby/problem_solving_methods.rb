@@ -37,3 +37,39 @@ if fib(100).last == 218922995834555169026
 else
   puts 'Try again'
 end
+
+
+# define a bubble sort method with array parameter
+
+def bubble_sort(array)
+  # initialize sorted to true
+  sorted = false
+  #initialized swapped variable
+  swapped = false
+#define a variable that takes the length of the parameter(array.length)
+  length = array.length
+
+#loop until sorted is true
+  until sorted
+    sorted = true
+
+# array length-1 times, loop
+    for input in 0...(length -2)
+# if the swapped varible is false after inner loop,
+#the array is sorted
+      if array[input] > array[input + 1]
+        sorted = false
+        array[input], array[input + 1] = array[input + 1], array[input]
+      end
+    end
+  end
+  # state of the swap is now true
+  return array
+  
+
+  if swapped == false
+    sorted = true
+  end
+end
+test_array = [99,11,78,555,90,1,12,87]
+p bubble_sort(test_array)
