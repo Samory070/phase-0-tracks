@@ -1,12 +1,12 @@
 #Swapping the first and last name.
 #Take users names and swap thie places
-
+loop do
 print "Enter your first name:"
  first_name = gets.chomp
 
 print "Enter your last name:"
 last_name = gets.chomp
-
+break if first_name  == 'exit' || last_name == 'exit' 
 
 #assign var to both names
  full_name = "#{first_name} #{last_name}"
@@ -22,6 +22,6 @@ def name_changer(name)
 end
  alias_name = name_changer(full_name)
  p "Your alias name is #{alias_name}"
+puts "Type 'exit' to exit"
 
-
-
+end
