@@ -1,3 +1,4 @@
+#  REALEASE 0 + 1
 # class Puppy
 
 # 	def initialize
@@ -37,6 +38,8 @@
 # sassy.roll_over
 # fido.dog_years(28)
 
+
+#RELEASE 2
 class Planets
 	attr_accessor :value
 	class << self
@@ -61,14 +64,14 @@ mars = Planets.new
 saturn = Planets.new
 
 #Initialize new_arr with earth, mars, ans saturn instances
-new_arr = [earth,mars, saturn]
+#new_arr = [earth,mars, saturn]
 
 #Initializes array and iterator.
 planets_arr = []
 
 #Iterate through numbers range 50 times while creating new instances each time
 #Assign vars to planets instances calling instance methods  
-numbers = (1..50).map do |n| 
+numbers = (1..50).each do |n| 
   number = Planets.new
   number.value = n
   number
@@ -76,15 +79,11 @@ numbers = (1..50).map do |n|
   rotating = Planets.rotate
 end
 
+#Another way of doing adding 50 instances
+# 50.times { planets_arr << Planets.new }
+# p planets_arr.index
 
-p planets_arr
-
-
-
-# loop do 
-# new_planets = Planets.new(50)
-# break if new_planets >= 50
+# planets_arr.each do |instance|
+#   spinning  = Planets.spin
+#   rotating  = Planets.rotate
 # end
-
-
-
