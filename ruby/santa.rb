@@ -1,64 +1,7 @@
-
-class Reindeer
-	#Declared instance methods
-	def initialize(name)
-		@name = name
-		@location = "the North Pole"
-	end
-
-	def take_off(alt)
-		puts "#{@name} took off"
-		puts "#{@name} ascended to #{alt} feet!"
-	end
-
-	def land(location)
-		puts "#{@name} landed safely in #{location}"
-		@location = location # => updates location var
-	end
-	def about
-		puts "Name: #{@name}"
-		puts "location: #{@location}"
-	end
-	
-	def name #getter method make attributes availiable outside class
-		@name
-	end
-
-	def location
-		@location
-	end
-
-	def name=(new_name) # setter/writer methods for changinf attributes
-		@name = new_name
-	end
-end
-
-# reindeer = Reindeer.new("Blitzen") #Initialize instance method arg called here
-# reindeer.about # instance methods
-# reindeer.take_off(3000)
-# reindeer.land("BC")
-# reindeer.about
-
-
-# reindeer = Reindeer.new("Rudolph")
-# reindeer.about
-# reindeer.take_off(5000)
-# reindeer.land("Paris")
-# reindeer.about
-
-# reindeer = Reindeer.new("Dasher")
-# puts "#{reindeer.name} is in #{reindeer.location}."
-# reindeer.take_off(10000)
-# reindeer.land("Bombay")
-# reindeer.name = "The Reindeer Formerly Known As Dasher"
-#  puts "#{reindeer.name} is in #{reindeer.location}."
-
-
-
-
 class Santa
 	
-	attr_reader :gender, :ethnicity, :reindeer_ranking, :age
+	attr_reader :ethnicity, :reindeer_ranking, :age
+	attr_accessor :gender
 	def speak
 		puts 'Ho, ho, ho! Haaaappy holidays!'
 	end
@@ -71,7 +14,7 @@ class Santa
 		print 'Initializing Santa instance ...'
 		@gender = gender
 		@ethnicity = ethnicity
-		@age = 0
+		@age =  rand(0..140)
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 	end
 
@@ -83,17 +26,17 @@ class Santa
 	  @reindeer_ranking << reindeer_ranking.delete(reindeer_name)
  	end
 
-	def gender=(new_gender)
-    	@gender = new_gender
-  	end
+	# def gender=(new_gender)
+ #    	@gender = new_gender
+ #  	end
 
-  	def age
-      @age
-  	end
+ #  	def age
+ #      @age
+ #  	end
 
-	def ethnicity
- 	  @ethnicity
-	end
+	# def ethnicity
+ # 	  @ethnicity
+	# end
 
 end
 
@@ -114,14 +57,17 @@ ethnicities_array = ["Black", "Latino", "White", "Japanese", "Afrikaans", "Roman
 #Driver Code
 Bob = Santa.new('female', 'Cuban') 
 
-
-
 p santas
 p Bob.celebrate_birthday
 p Bob.get_mad_at("Prancer")
 p Bob.gender = "bi"
 p Bob.age 
 p Bob.ethnicity
+
+1000.times do 
+  santas << Santa.new(genders_array.sample, ethnicities_array.sample)
+end
+
 
 
 
