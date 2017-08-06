@@ -72,16 +72,37 @@ class Santa
 		@gender = gender
 		@ethnicity = ethnicity
 		@age = 0
-		reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 	end
+
+	def celebrate_birthday
+    	@age += 1
+    end
+
+	def get_mad_at(reindeer_name)
+	  @reindeer_ranking << reindeer_ranking.delete(reindeer_name)
+ 	end
+
+	def gender=(new_gender)
+    	@gender = new_gender
+  	end
+
+  	def age
+      @age
+  	end
+
+	def ethnicity
+ 	  @ethnicity
+	end
+
 end
 
 #Pseudocode
 #Initialize empty array to store Santa instances in
 # Initialize gender array with gender identities stored as strings
 # Initialize ethnicity array with ethnicities stored as strings
-# Loop X number of times
-#   Add random item from both gender_array and ethnicity_array to santa_instance_array
+# Loop X number of times to make new santa instances
+
 
 
 santas = []
@@ -91,12 +112,16 @@ genders_array = ["agender", "female", "bigender", "male", "pan", "gender fluid",
 ethnicities_array = ["Black", "Latino", "White", "Japanese", "Afrikaans", "Romanian", "Jamaican", "Turkish", "Instanbul", "Cuban"]
 
 #Driver Code
+Bob = Santa.new('female', 'Cuban') 
 
-50.times do |i|
-  santas << Santa.new(genders_array[i], ethnicities_array[i])
-end
+
 
 p santas
+p Bob.celebrate_birthday
+p Bob.get_mad_at("Prancer")
+p Bob.gender = "bi"
+p Bob.age 
+p Bob.ethnicity
 
 
 
