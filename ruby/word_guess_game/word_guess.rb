@@ -1,13 +1,14 @@
 # game class
 
 class WordGame
-  
+ attr_accessor :@word 
   
 	#initialize method that inserts word upon initializtion
   def initialize(word)
     @word = word
     @result_str = "_" * @word.length
   end 
+
  
 	#method to guess letter	
 	def letter_check(letter)
