@@ -1,3 +1,25 @@
+class TodoList
+  def initialize(array)
+    @items_array = ["do the dishes", "mow the lawn"]
+  end
+  
+  def get_items
+   p @items_array 
+  end
+  
+  def add_item(item)
+    @items_array << item
+  end
+
+  def delete_item(string)
+    @items_array.delete(string)
+  end
+
+  def get_item(index)
+    @items_array.fetch(index)
+  end
+end
+
 describe TodoList do
   let(:list) { TodoList.new(["do the dishes", "mow the lawn"]) }
 
