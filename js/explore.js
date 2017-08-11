@@ -7,6 +7,12 @@
 function reverseString(str){
 	return str.split("").reverse().join("");
 }
-reverseString("hello");
 
+var result = true;
+
+var reverseword = reverseString("hello");
+
+if (result) {
+	console.log(reverseword);
+}
 
