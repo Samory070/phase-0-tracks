@@ -4,3 +4,9 @@
 //put sting back together with .join("")
 //print string to console
 
+function reverseString(str){
+	return str.split("").reverse().join("");
+}
+reverseString("hello");
+
+
