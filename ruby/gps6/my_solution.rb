@@ -4,8 +4,8 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+#require_releative link local files
+#require links files that are not local files
 require_relative 'state_data'
 
 class VirusPredictor
