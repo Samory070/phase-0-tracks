@@ -17,10 +17,10 @@ class VirusPredictor
     @population_density = population_density
   end
 
-# calls predicted deaths and speed of spread
+# calls predicted deaths and speed of spread methods
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths
+    speed_of_spread
   end
 
   private
@@ -28,6 +28,7 @@ class VirusPredictor
 # using if else statemnt to predict deaths based on population and population density
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
+
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
     elsif @population_density >= 150
