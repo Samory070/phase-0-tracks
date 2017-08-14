@@ -86,7 +86,10 @@ california.virus_effects
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 alaska.virus_effects
 
-
+STATE_DATA.each do |state, population_info|
+  state_predictor = VirusPredictor.new(state, population_info[:population_density], population_info[:population])
+  state_predictor.virus_effects
+end
 #=======================================================================
 # Reflection Section
 
