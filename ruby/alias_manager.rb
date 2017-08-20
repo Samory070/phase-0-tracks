@@ -5,48 +5,102 @@ puts "Welcome to future, try your hand at a snazzy Alias Generator"
 puts "Type 'quit' to quit"
 
 #converts full_name into lowercase
-def name_change(name)
 
-#initialize variables, %w sets '' and , in (), using instance vars
-@vowels = %w( a e i o u )
-@consonants = ('a'..'z').to_a - @vowels
+
+#  %w sets '' and ,
+  vowels = %w( a e i o u )
+  consonants = ('a'..'z').to_a - vowels
+
+def name_swap(real_name)
+  reverse_name = real_name.downcase.split(' ').reverse.join(' ')
+  reverse_name
+end
+
+def vowel_change(real_name)
+  vowels = %w[ a e i o u ]   # =>  %w sets '' and ,
+  real_name = real_name.downcase.chars
+  real_name.map! do |letter|
+    if vowels.include?(letter)
+    	letter = vowels.rotate[vowels.index(letter)]
+    else
+      letter = letter
+    end
+  end
+  return real_name.join
+end
+ 
+
+def constant_change(real_name)
+  consonants = "bcdfghjklmnpqrstvwxyz"  # =>('a'..'z').to_a - %w[ a e i o u ]
+  consonants = consonants.chars
+  real_name = real_name.downcase.chars
+  real_name.map! do |letter|
+    if consonants.include?(letter)
+     letter = consonants.rotate[consonants.index(letter)]
+    else
+      letter = letter
+    end
+  end
+  return real_name.join
+end
+
+def full_name(real_name)
+	constant_change(vowel_change(name_swap(real_name)))
+end
+
+
+p name_swap("samory harris")
+p vowel_change("samory harris")
+p constant_change("samory harris")
+p full_name("teressa jones")
+
+
+
+
+# def name_change(name)
+
+# #initialize variables, %w sets '' and , in (), using instance vars
+# @owels = %w( a e i o u )
+# @onsonants = ('a'..'z').to_a - vowels
 
 #converts string to lowercase, tr replaces str chars with the next char with the rotate method, then joining the str together
-name.downcase.tr(@vowels.join, @vowels.rotate.join).tr(@consonants.join, @consonants.rotate.join)
-end
+# name.downcase.tr(@vowels.join, @vowels.rotate.join).tr(@consonants.join, @consonants.rotate.join)
+# end
   
-saved_alias = {}
 
-loop do
-#ask for first name, concert to lowercase
-print "To start please enter your first name:"
-@first_name = gets.chomp.downcase
+# saved_alias = []
+# name_change_count = 0
 
-#ask for last name convert to lowercase
-print "And now enter your last name:"
-@last_name = gets.chomp.downcase
+# until name_change_count == 2
+# #ask for first name, concert to lowercase
+# print "To start please enter your first name:"
+# @first_name = gets.chomp.downcase
 
-break if @first_name  == 'quit' || @last_name == 'quit'
+# #ask for last name convert to lowercase
+# print "And now enter your last name:"
+# @last_name = gets.chomp.downcase
 
-#assign var to add both names
-@full_name = @last_name + " " + @first_name
+# break if @first_name  == 'quit' || @last_name == 'quit'
 
-#convert string to array
-@full_name = @full_name.split(' ').reverse.join(' ')
+# #assign var to add both names
+# @full_name = @last_name + " " + @first_name
 
-#call fullname in name_change method assigned to alias_name
- @alias_name = name_change(@full_name)
+# #convert string to array
+# p @full_name = @full_name.split(' ').reverse.join(' ')
+
+
+# #call fullname in name_change method assigned to alias_name
+#  @alias_name = name_change(@full_name)
  
 
-saved_alias['new_alias'.to_sym] = @alias_name
- 
+# saved_alias['new_alias'.to_sym] = @alias_name
+ # end
 
- end
 #iterate through hash to pull alias name
-saved_alias.each do |full_name, new_alias|
-	puts "#{@alias_name} is also known as #{@full_name}"
-end
-puts "Thanks for trying the Alias Generator"
+# saved_alias.each do |full_name, new_alias|
+# 	puts "#{@alias_name} is also known as #{@full_name}"
+# end
+# puts "Thanks for trying the Alias Generator"
 
 # loop do
 # if @first_name == 'quit'
@@ -79,3 +133,15 @@ puts "Thanks for trying the Alias Generator"
 # 	end
 # end 
 # const_change(vowel_change(full_name))
+
+
+#take the name 
+# separate the name, reverse order, 
+# them join them back togther
+
+
+
+
+  		
+
+
