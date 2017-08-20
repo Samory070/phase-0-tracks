@@ -2,7 +2,7 @@
 #Take users names and swap thie places
 
 puts "Welcome to future, try your hand at a snazzy Alias Generator"
-puts "Type 'quit' to quit"
+
 
 #converts full_name into lowercase
 
@@ -13,7 +13,7 @@ puts "Type 'quit' to quit"
 
 def name_swap(real_name)
   reverse_name = real_name.downcase.split(' ').reverse.join(' ')
-  reverse_name
+  return reverse_name
 end
 
 def vowel_change(real_name)
@@ -49,10 +49,39 @@ def full_name(real_name)
 end
 
 
-p name_swap("samory harris")
-p vowel_change("samory harris")
-p constant_change("samory harris")
-p full_name("teressa jones")
+# p name_swap("samory harris")
+# p vowel_change("samory harris")
+# p constant_change("samory harris")
+# p full_name("teressa jones")
+# name = "Samory Harris".downcase.split(' ').reverse.join(' ')
+# p name.class
+
+saved_alias = {}
+
+loop do 
+  # Ask for first name, change input to lowercase letters
+  puts "What is your name?"
+user_name = gets.chomp
+
+  break if user_name == "quit" 
+
+  # Swap names
+  # full_name = last_name +  " " + first_name
+
+
+  #  Select full name, convert the string to an array <------- Why is the array displayed vertically? ------->
+  user_name = full_name(user_name)
+
+  # Iterate through the array and change vowels and consonants  
+  fakename = name_swap(user_name)
+
+  saved_alias[full_name(user_name)] = fakename
+
+end
+# Access data in the hash & iterate
+saved_alias.each do |full_name, fakename|
+    puts "#{full_name} is actually #{fakename}"
+  end
 
 
 
