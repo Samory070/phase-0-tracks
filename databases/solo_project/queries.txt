@@ -54,3 +54,16 @@ DELETE FROM superheros WHERE mutant=“true”;
 1|Superman|false|7|2|2|DC
 3|Batman|false|7|2|2|DC
 4|Wonder Woman|false|8|2|2|DC
+
+
+There are lots of different kinds of joins. What are they? Can you apply different conditions to a join to change what's displayed?
+ 
+ Different Types of JOINs in SQL:
+ 
+ (INNER) JOIN: Returns records that have matching values in both tables
+ 
+ LEFT (OUTER) JOIN: Return all records from the left table, and the matched records from the right table
+ 
+ RIGHT (OUTER) JOIN: Return all records from the right table, and the matched records from the left table
+ 
+ FULL (OUTER) JOIN: Return all records when there is a match in either left or right table
