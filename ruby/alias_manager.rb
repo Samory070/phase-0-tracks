@@ -61,7 +61,7 @@ saved_alias = {}
 loop do 
   # Ask for first name, change input to lowercase letters
   puts "What is your name?"
-user_name = gets.chomp
+  user_name = gets.chomp
 
   break if user_name == "quit" 
 
@@ -69,19 +69,17 @@ user_name = gets.chomp
   # full_name = last_name +  " " + first_name
 
 
-  #  Select full name, convert the string to an array <------- Why is the array displayed vertically? ------->
-  user_name = full_name(user_name)
-
   # Iterate through the array and change vowels and consonants  
   fakename = name_swap(user_name)
 
   saved_alias[full_name(user_name)] = fakename
-
+   
+  # Access data in the hash & iterate
+  saved_alias.each do |full_name, fakename|
+    puts "#{full_name} is actually #{fakename} which is #{user_name}"
+  end 
 end
-# Access data in the hash & iterate
-saved_alias.each do |full_name, fakename|
-    puts "#{full_name} is actually #{fakename}"
-  end
+
 
 
 
