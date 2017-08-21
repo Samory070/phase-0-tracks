@@ -1,0 +1,56 @@
+sqlite> .schema
+CREATE TABLE superheros (
+ id INTEGER PRIMARY KEY,
+name VARCHAR(30),
+mutant BOOLEAN,
+ranking INTEGER,
+team_id INTEGER,
+ FOREIGN KEY(team_id) REFERENCES hero_team(id));
+
+CREATE TABLE team_id (
+ id INTEGER PRIMARY KEY,
+name VARCHAR(30));
+
+Display the information in one table (either table is fine).
+
+SELECT * FROM superheros;
+
+1|Superman|false|7|2
+2|Wolverine|true|9|1
+3|Batman|false|9|2
+4|Wonder Woman|false|8|2
+
+Update an item that meets some condition (you can choose a condition that makes sense).
+
+UPDATE superheros SET mutant =“true” WHERE name = “Wonder Wonder”;
+UPDATE superheros SET ranking = 7 WHERE id = “Batman”;
+
+1|Superman|false|7|2
+2|Wolverine|true|9|1
+3|Batman|false|7|2
+4|Wonder Woman|false|8|2
+
+Display the information in both tables using one query.
+
+SELECT * FROM superheros, team_id WHERE superheros.team_id = team_id.id;
+
+1|Superman|false|7|2|2|DC
+2|Wolverine|true|9|1|1|Marvel
+3|Batman|false|7|2|2|DC
+4|Wonder Woman|false|8|2|2|DC
+
+Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+SELECT superheros.name, superheros.mutant FROM superheros, team_id WHERE superheros.team_id = team_id.id;
+
+Superman|false
+Wolverine|true
+Batman|false
+Wonder Woman|false
+
+Delete an item that meets some condition (you can choose a condition that makes sense).
+
+DELETE FROM superheros WHERE mutant=“true”;
+
+1|Superman|false|7|2|2|DC
+3|Batman|false|7|2|2|DC
+4|Wonder Woman|false|8|2|2|DC
