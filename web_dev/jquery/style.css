@@ -1,0 +1,134 @@
+
+  h1 {
+    font-size: 3.25rem;
+    text-align: center;
+    margin: 5 px;
+    font-family: 'righteous';
+    color: #f4b841;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 2rem; /*32/16*/
+    color: rgb(250,0,100);
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: 'Abel'
+}
+
+footer {
+  margin: 10px;
+  padding: 5px;
+}
+
+header {
+  border-radius: 5px;
+ /* background-position: center;
+  background-size: cover;*/
+  margin: 0 auto;
+  display: inline-block;
+}
+
+p {
+  color: rgba(100,100,255,1)
+   background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 1.4375rem;
+  text-align: justify;
+  position: absolute;
+  bottom: 0px;
+  margin: 0px;
+  height: 140px;
+ }
+
+ body {
+    /*background-position: center;*/
+    /*background-size: cover;*/
+    text-align: center;
+    /*background-image: url("https://s-media-cache-ak0.pinimg.com/736x/88/93/0e/88930e8c21b046b8049bbcce429093a3.jpg");*/
+    font: 1em/1.5 "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    background-color: #41ebf4;
+}
+
+  div{
+    height: 200px;
+    background-size: cover;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    max-width: 90%;
+
+}
+
+img {
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 2px black solid;
+    max-width: 100%;
+    }
+
+.profile-img {
+  width: 100%;
+  }
+
+ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+
+}
+
+a:link, a:visited {
+  display: block;
+  width: 150px;
+  background-color: yellowgreen;
+  color: #f0f0f0;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 5px;
+}
+
+a:hover {
+  color: red;
+}
+
+/*li {
+  margin: 50px auto;
+}*/
+
+li a {
+  font-size: 1.5em;
+  float: left;
+
+}
+
+ small {
+  font-size: 1.125rem;
+  color:rgb(100,250,55);
+
+}
+
+.first{
+  background-image: url("https://i.stack.imgur.com/P5ngF.jpgg");
+}
+.second{
+  background-image: url("http://cdn.gearpatrol.com/wp-content/uploads/2016/05/climbing-rope-gear-patrol-blue-water.jpg");
+
+}
+.third{
+  background-image: url("http://codecondo.com/wp-content/uploads/2014/04/5-Coding-Challenges-to-Help-You-Train-Your-Brain.jpg?478983");
+
+}
+
+.col-4 {
+  display:float;
+  clear: both;
+  float: left;
+}
