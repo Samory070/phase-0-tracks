@@ -106,3 +106,7 @@ get '/students/campus' do
   response
 end
 
+post '' do 
+
+end
+
